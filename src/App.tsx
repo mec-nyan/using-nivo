@@ -43,126 +43,31 @@ const data: Array<Data> = [
 ];
 
 type Datum = {
-  country: string;
-  "hot dog": number;
-  "hot dogColor": string;
-  burger: number;
-  burgerColor: string;
-  sandwich: number;
-  sandwichColor: string;
-  kebab: number;
-  kebabColor: string;
-  fries: number;
-  friesColor: string;
-  donut: number;
-  donutColor: string;
+  country?: string;
+  donut?: number;
+  donutColor?: string;
 };
 
 const datum: Array<Datum> = [
   {
     country: "AD",
-    "hot dog": 32,
-    "hot dogColor": "hsl(92, 70%, 50%)",
-    burger: 117,
-    burgerColor: "hsl(357, 70%, 50%)",
-    sandwich: 34,
-    sandwichColor: "hsl(68, 70%, 50%)",
-    kebab: 137,
-    kebabColor: "hsl(289, 70%, 50%)",
-    fries: 164,
-    friesColor: "hsl(128, 70%, 50%)",
     donut: 111,
-    donutColor: "hsl(336, 70%, 50%)",
+    donutColor: "hsl(136, 70%, 50%)",
   },
   {
     country: "AE",
-    "hot dog": 115,
-    "hot dogColor": "hsl(316, 70%, 50%)",
-    burger: 46,
-    burgerColor: "hsl(90, 70%, 50%)",
-    sandwich: 119,
-    sandwichColor: "hsl(25, 70%, 50%)",
-    kebab: 39,
-    kebabColor: "hsl(21, 70%, 50%)",
-    fries: 113,
-    friesColor: "hsl(105, 70%, 50%)",
     donut: 173,
-    donutColor: "hsl(359, 70%, 50%)",
+    donutColor: "hsl(336, 70%, 50%)",
   },
   {
     country: "AF",
-    "hot dog": 148,
-    "hot dogColor": "hsl(32, 70%, 50%)",
-    burger: 34,
-    burgerColor: "hsl(178, 70%, 50%)",
-    sandwich: 60,
-    sandwichColor: "hsl(65, 70%, 50%)",
-    kebab: 100,
-    kebabColor: "hsl(134, 70%, 50%)",
-    fries: 120,
-    friesColor: "hsl(116, 70%, 50%)",
     donut: 116,
-    donutColor: "hsl(178, 70%, 50%)",
+    donutColor: "hsl(336, 70%, 50%)",
   },
   {
     country: "AG",
-    "hot dog": 63,
-    "hot dogColor": "hsl(359, 70%, 50%)",
-    burger: 31,
-    burgerColor: "hsl(331, 70%, 50%)",
-    sandwich: 198,
-    sandwichColor: "hsl(40, 70%, 50%)",
-    kebab: 49,
-    kebabColor: "hsl(240, 70%, 50%)",
-    fries: 2,
-    friesColor: "hsl(88, 70%, 50%)",
     donut: 171,
-    donutColor: "hsl(289, 70%, 50%)",
-  },
-  {
-    country: "AI",
-    "hot dog": 62,
-    "hot dogColor": "hsl(86, 70%, 50%)",
-    burger: 158,
-    burgerColor: "hsl(199, 70%, 50%)",
-    sandwich: 188,
-    sandwichColor: "hsl(219, 70%, 50%)",
-    kebab: 147,
-    kebabColor: "hsl(220, 70%, 50%)",
-    fries: 104,
-    friesColor: "hsl(266, 70%, 50%)",
-    donut: 39,
-    donutColor: "hsl(117, 70%, 50%)",
-  },
-  {
-    country: "AL",
-    "hot dog": 173,
-    "hot dogColor": "hsl(162, 70%, 50%)",
-    burger: 30,
-    burgerColor: "hsl(232, 70%, 50%)",
-    sandwich: 193,
-    sandwichColor: "hsl(124, 70%, 50%)",
-    kebab: 146,
-    kebabColor: "hsl(83, 70%, 50%)",
-    fries: 113,
-    friesColor: "hsl(117, 70%, 50%)",
-    donut: 8,
-    donutColor: "hsl(255, 70%, 50%)",
-  },
-  {
-    country: "AM",
-    "hot dog": 182,
-    "hot dogColor": "hsl(232, 70%, 50%)",
-    burger: 154,
-    burgerColor: "hsl(213, 70%, 50%)",
-    sandwich: 181,
-    sandwichColor: "hsl(152, 70%, 50%)",
-    kebab: 1,
-    kebabColor: "hsl(99, 70%, 50%)",
-    fries: 63,
-    friesColor: "hsl(160, 70%, 50%)",
-    donut: 24,
-    donutColor: "hsl(229, 70%, 50%)",
+    donutColor: "hsl(336, 70%, 50%)",
   },
 ];
 
@@ -309,47 +214,12 @@ const MyResponsiveBar = ({
 }) => (
   <ResponsiveBar
     data={data}
-    keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
+    keys={["donut"]}
     indexBy="country"
     margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
     padding={0.3}
     valueScale={{ type: "linear" }}
     indexScale={{ type: "band", round: true }}
-    colors={{ scheme: "nivo" }}
-    defs={[
-      {
-        id: "dots",
-        type: "patternDots",
-        background: "inherit",
-        color: "#38bcb2",
-        size: 4,
-        padding: 1,
-        stagger: true,
-      },
-      {
-        id: "lines",
-        type: "patternLines",
-        background: "inherit",
-        color: "#eed312",
-        rotation: -45,
-        lineWidth: 6,
-        spacing: 10,
-      },
-    ]}
-    fill={[
-      {
-        match: {
-          id: "fries",
-        },
-        id: "dots",
-      },
-      {
-        match: {
-          id: "sandwich",
-        },
-        id: "lines",
-      },
-    ]}
     borderColor={{ from: "color", modifiers: [["darker", 1.6]] }}
     axisTop={null}
     axisRight={null}
