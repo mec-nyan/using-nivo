@@ -1,17 +1,6 @@
 import "./App.css";
 import { ResponsivePie } from "@nivo/pie";
 
-export default function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Using nivo charts</h1>
-        <MyResponsivePie />
-      </header>
-    </div>
-  );
-}
-
 const data = [
   {
     id: "lisp",
@@ -44,7 +33,21 @@ const data = [
     color: "hsl(277, 70%, 50%)",
   },
 ];
-const MyResponsivePie = () => (
+
+export default function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Using Nivo Charts</h1>
+      </header>
+      <div className="container">
+        <MyResponsivePie data={data} />
+      </div>
+    </div>
+  );
+}
+
+const MyResponsivePie = ({ data }: { data: any }) => (
   <ResponsivePie
     data={data}
     margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
