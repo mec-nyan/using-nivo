@@ -8,7 +8,7 @@ const CustomBar = ({ data }: { data: Array<Babe> }) => (
     // indexBy: string | number >> Optional. Default: 'id'
     indexBy="name"
     // keys: {string[]} >> Optional. Default: 'value'
-    keys={["movies"]}
+    keys={["lez", "bjOnly", "movies"]}
     // groupMode: 'grouped' | 'stacked' >> Optional. Default: 'stacked'
     groupMode="stacked"
     // layout: 'horizontal' | 'vertical' >> Optional. Default: 'vertical'
@@ -34,7 +34,7 @@ const CustomBar = ({ data }: { data: Array<Babe> }) => (
     // height: number >> Not required when using <ResponsiveBar />
     // pixelRatio: number >> Optional
     // margin: object >> Optional
-    margin={{ top: 50, right: 50, left: 50, bottom: 50 }}
+    margin={{ top: 50, right: 100, left: 50, bottom: 50 }}
     //
     // STYLES
     //
@@ -45,10 +45,10 @@ const CustomBar = ({ data }: { data: Array<Babe> }) => (
     // colorBy: 'id' | 'indexValue' >> Optional. Default="id"
     colorBy="id"
     // borderRadius: number >> Optional. Default=0
-    borderRadius={10}
+    borderRadius={0}
     // borderColor: string | object | function >> Optional. Default: {from: 'color'}
-    borderColor="purple"
-    borderWidth={2}
+    borderColor="white"
+    borderWidth={1}
     // defs: object >> Optional (Define patterns and gradients)
     // fill: object >> Optional (Define rules to apply patterns and gradients)
     //
@@ -62,6 +62,48 @@ const CustomBar = ({ data }: { data: Array<Babe> }) => (
     //
     // enableLabel: boolean >> default: true
     enableLabel={true}
+    // label: string | function >> Default="formattedValue"
+    label="formattedValue"
+    // labelSkipWidth: number >> Optional. Default: 0
+    // labelSkipHeight: number >> Optional. Default: 0
+    // labelTextColor: string | object | function >> Optional. Default: {from: 'theme', theme: 'labels.text.fill'}
+    labelTextColor="white"
+    //
+    // GRIDS AND AXES
+    //
+    enableGridX={false}
+    enableGridY={true}
+    // gridXValues: Array<number | string> >> Optional
+    // gridYValues: Array<number | string> >> Optional
+    axisLeft={{
+      tickSize: 5,
+      tickPadding: 0,
+      tickRotation: 0,
+      legend: "Movies",
+      legendOffset: -40,
+    }}
+    axisBottom={{
+      tickSize: 5,
+      tickPadding: 0,
+      tickRotation: 0,
+      legend: "Pawn stars",
+      legendOffset: 40,
+    }}
+    // isInteractive: boolean >> Optional. Default={true}
+    isInteractive={true}
+    // tooltip: function >> Optional.
+    // onClick: function >> Optional.
+    legends={[
+      {
+        itemWidth: 100,
+        itemHeight: 20,
+        dataFrom: "keys",
+        anchor: "bottom-right",
+        direction: "column",
+        translateX: 120,
+        translateY: 0,
+      },
+    ]}
   />
 );
 

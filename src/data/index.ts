@@ -144,23 +144,39 @@ const datum: Array<Datum> = [
 const babes: Array<Babe> = [
   {
     name: "Piper",
+    lez: 22,
+    lezColor: "pink",
+    bjOnly: 34,
+    bjOnlyColor: "orange",
     movies: 100,
-    moviesColor: "pink",
+    moviesColor: "tomato",
   },
   {
     name: "Megan",
+    lez: 0,
+    lezColor: "pink",
+    bjOnly: 65,
+    bjOnlyColor: "orange",
     movies: 241,
     moviesColor: "tomato",
   },
   {
     name: "Alex",
+    lez: 10,
+    lezColor: "pink",
+    bjOnly: 27,
+    bjOnlyColor: "orange",
     movies: 300,
-    moviesColor: "steelblue",
+    moviesColor: "tomato",
   },
   {
     name: "Kenzie",
+    lez: 34,
+    lezColor: "pink",
+    bjOnly: 43,
+    bjOnlyColor: "orange",
     movies: 541,
-    moviesColor: "hotpink",
+    moviesColor: "tomato",
   },
 ];
 

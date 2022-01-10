@@ -27,6 +27,10 @@ export type Datum = {
 
 export type Babe = {
   name?: string;
+  lez?: number;
+  lezColor?: string;
+  bjOnly?: number;
+  bjOnlyColor?: string;
   movies?: number;
   moviesColor?: string;
 };
