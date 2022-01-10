@@ -1,8 +1,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
-import { MyResponsivePie, MyResponsiveBar } from "./components/Graphs";
-import { data, datum } from "./data";
+import {
+  MyResponsivePie,
+  MyResponsiveBar,
+  CustomBar,
+} from "./components/Graphs";
+import { data, datum, babes } from "./data";
 
 export default function App() {
   return (
@@ -12,6 +16,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="pie" element={<Pie />} />
         <Route path="bar" element={<Bar />} />
+        <Route path="babes" element={<BabesBar />} />
         <Route path="more" element={<More />} />
       </Routes>
     </div>
@@ -49,6 +54,16 @@ function Bar() {
     <div className="charts">
       <div className="container">
         <MyResponsiveBar data={datum} />
+      </div>
+    </div>
+  );
+}
+
+function BabesBar() {
+  return (
+    <div className="charts">
+      <div className="container">
+        <CustomBar data={babes} />
       </div>
     </div>
   );
