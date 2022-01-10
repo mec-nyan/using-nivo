@@ -39,6 +39,21 @@ const CustomBar = ({ data }: { data: Array<Babe> }) => (
     // STYLES
     //
     // theme: Theme >> Optional
+    theme={{
+      background: "transparent",
+      textColor: "orange",
+      fontSize: 12,
+      axis: {
+        legend: {
+          text: {
+            fontSize: 16,
+            fontStyle: "normal",
+            fontWeight: "bold",
+            fill: "tomato",
+          },
+        },
+      },
+    }}
     // colors: OrdinalColorScaleConfig >> Optional. Default={'scheme': 'nivo'}
     //>> You can pass a cb to use the colors provided in the data object:
     colors={({ id, data }) => String(data[`${id}Color`])}
@@ -80,6 +95,7 @@ const CustomBar = ({ data }: { data: Array<Babe> }) => (
       tickPadding: 0,
       tickRotation: 0,
       legend: "Movies",
+      legendPosition: "middle",
       legendOffset: -40,
     }}
     axisBottom={{
@@ -87,6 +103,7 @@ const CustomBar = ({ data }: { data: Array<Babe> }) => (
       tickPadding: 0,
       tickRotation: 0,
       legend: "Pawn stars",
+      legendPosition: "middle",
       legendOffset: 40,
     }}
     // isInteractive: boolean >> Optional. Default={true}
@@ -102,6 +119,7 @@ const CustomBar = ({ data }: { data: Array<Babe> }) => (
         direction: "column",
         translateX: 120,
         translateY: 0,
+        symbolShape: "circle",
       },
     ]}
   />
