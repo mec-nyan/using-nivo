@@ -2,14 +2,14 @@ export type ChartProps = {
   data: Array<Data>;
 };
 
-type Data = {
+export type Data = {
   id: string;
   label: string;
   value: number;
   color: string;
 };
 
-type Datum = {
+export type Datum = {
   country?: string;
   "hot dogColor"?: string;
   "hot dog"?: number;
@@ -23,4 +23,10 @@ type Datum = {
   friesColor?: string;
   donut?: number;
   donutColor?: string;
+};
+
+export type Babe = {
+  name?: string;
+  movies?: number;
+  moviesColor?: string;
 };
