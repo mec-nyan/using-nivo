@@ -1,4 +1,4 @@
-import { Data, Datum } from "../types";
+import { Data, Datum, Babe } from "../types";
 
 const data: Array<Data> = [
   {
@@ -141,4 +141,22 @@ const datum: Array<Datum> = [
   },
 ];
 
-export { data, datum };
+const babes: Array<Babe> = [
+  {
+    name: "Piper",
+    movies: 100,
+    moviesColor: "pink",
+  },
+  {
+    name: "Megan",
+    movies: 241,
+    moviesColor: "tomato",
+  },
+  {
+    name: "Alex",
+    movies: 300,
+    moviesColor: "steelblue",
+  },
+];
+
+export { data, datum, babes };
