@@ -157,6 +157,11 @@ const babes: Array<Babe> = [
     movies: 300,
     moviesColor: "steelblue",
   },
+  {
+    name: "Kenzie",
+    movies: 541,
+    moviesColor: "hotpink",
+  },
 ];
 
 export { data, datum, babes };
