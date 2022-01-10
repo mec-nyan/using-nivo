@@ -29,8 +29,8 @@ export type Babe = {
   name?: string;
   lez?: number;
   lezColor?: string;
-  bjOnly?: number;
-  bjOnlyColor?: string;
+  "bj only"?: number;
+  "bj onlyColor"?: string;
   movies?: number;
   moviesColor?: string;
 };

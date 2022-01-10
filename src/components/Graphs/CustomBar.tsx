@@ -8,7 +8,7 @@ const CustomBar = ({ data }: { data: Array<Babe> }) => (
     // indexBy: string | number >> Optional. Default: 'id'
     indexBy="name"
     // keys: {string[]} >> Optional. Default: 'value'
-    keys={["lez", "bjOnly", "movies"]}
+    keys={["lez", "bj only", "movies"]}
     // groupMode: 'grouped' | 'stacked' >> Optional. Default: 'stacked'
     groupMode="stacked"
     // layout: 'horizontal' | 'vertical' >> Optional. Default: 'vertical'
@@ -41,16 +41,34 @@ const CustomBar = ({ data }: { data: Array<Babe> }) => (
     // theme: Theme >> Optional
     theme={{
       background: "transparent",
-      textColor: "orange",
+      textColor: "hsl(350, 50%, 65%)",
       fontSize: 12,
       axis: {
+        ticks: {
+          line: {
+            strokeWidth: 2,
+            stroke: "hsl(290, 80%, 70%)",
+          },
+        },
+        domain: {
+          line: {
+            stroke: "hsl(340, 50%, 80%)",
+            strokeWidth: 1,
+          },
+        },
         legend: {
           text: {
             fontSize: 16,
             fontStyle: "normal",
             fontWeight: "bold",
-            fill: "tomato",
+            fill: "hsl(340, 80%, 70%)",
           },
+        },
+      },
+      grid: {
+        line: {
+          stroke: "hsl(350, 80%, 90%)",
+          strokeWidth: 1,
         },
       },
     }}
@@ -102,7 +120,7 @@ const CustomBar = ({ data }: { data: Array<Babe> }) => (
       tickSize: 5,
       tickPadding: 0,
       tickRotation: 0,
-      legend: "Pawn stars",
+      legend: "Starlets",
       legendPosition: "middle",
       legendOffset: 40,
     }}
