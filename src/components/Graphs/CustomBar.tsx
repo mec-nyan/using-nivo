@@ -1,13 +1,14 @@
 import { ResponsiveBar } from "@nivo/bar";
+import { Babe } from "../../types";
 
-const CustomBar = ({ data }) => (
+const CustomBar = ({ data }: { data: Array<Babe> }) => (
   <ResponsiveBar
     // data: object[] >> required
     data={data}
     // indexBy: string | number >> Optional. Default: 'id'
-    indexBy="id"
+    indexBy="name"
     // keys: {string[]} >> Optional. Default: 'value'
-    keys={["value"]}
+    keys={["movies"]}
     // groupMode: 'grouped' | 'stacked' >> Optional. Default: 'stacked'
     groupMode="stacked"
     // layout: 'horizontal' | 'vertical' >> Optional. Default: 'vertical'
@@ -26,7 +27,7 @@ const CustomBar = ({ data }) => (
     // Optional. Default=">-"
     valueFormat=">-"
     // padding: number >> Optional. Default: 0.1
-    padding={0.1}
+    padding={0.4}
     // innerPadding: number >> Optional. Default={0}
     innerPadding={0}
     // width: number >> Not required when using <ResponsiveBar />
@@ -44,11 +45,23 @@ const CustomBar = ({ data }) => (
     // colorBy: 'id' | 'indexValue' >> Optional. Default="id"
     colorBy="id"
     // borderRadius: number >> Optional. Default=0
-    borderRadius={0}
+    borderRadius={10}
     // borderColor: string | object | function >> Optional. Default: {from: 'color'}
-    borderColor="#ff0000"
+    borderColor="purple"
+    borderWidth={2}
     // defs: object >> Optional (Define patterns and gradients)
     // fill: object >> Optional (Define rules to apply patterns and gradients)
+    //
+    // CUSTOMIZATION
+    //
+    // layers: Array<string | function> >> Optional.
+    // Default={["grid", "axes", "bars", "markers", "legends", "annotations"]}
+    layers={["grid", "axes", "bars", "markers", "legends", "annotations"]}
+    //
+    // LABELS
+    //
+    // enableLabel: boolean >> default: true
+    enableLabel={true}
   />
 );
 
