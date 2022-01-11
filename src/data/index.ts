@@ -178,6 +178,15 @@ const babes: Array<Babe> = [
     movies: 247,
     moviesColor: "hsl(350, 80%, 70%)",
   },
+  {
+    name: "Adria",
+    lez: 41,
+    lezColor: "hsl(290, 80%, 70%)",
+    "bj only": 56,
+    "bj onlyColor": "hsl(330, 80%, 70%)",
+    movies: 196,
+    moviesColor: "hsl(350, 80%, 70%)",
+  },
 ];
 
 export { data, datum, babes };
