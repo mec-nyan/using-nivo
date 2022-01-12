@@ -19,6 +19,9 @@ export default function Nav() {
         <NavLink className="navlink" to="/babes">
           <div className="option">Babes</div>
         </NavLink>
+        <NavLink className="navlink" to="/lang">
+          <div className="option">Lang</div>
+        </NavLink>
         <NavLink className="navlink" to="/more">
           <div className="option">More</div>
         </NavLink>
