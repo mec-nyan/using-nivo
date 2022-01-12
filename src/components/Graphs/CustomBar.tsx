@@ -1,14 +1,14 @@
 import { ResponsiveBar } from "@nivo/bar";
 import { Babe } from "../../types";
 
-const CustomBar = ({ data }: { data: Array<Babe> }) => (
+const CustomBar = ({ data, keys }: { data: Array<Babe>, keys: Array<string> }) => (
   <ResponsiveBar
     // data: object[] >> required
     data={data}
     // indexBy: string | number >> Optional. Default: 'id'
     indexBy="name"
     // keys: {string[]} >> Optional. Default: 'value'
-    keys={["lez", "bj only", "movies"]}
+    keys={keys}
     // groupMode: 'grouped' | 'stacked' >> Optional. Default: 'stacked'
     groupMode="stacked"
     // layout: 'horizontal' | 'vertical' >> Optional. Default: 'vertical'
