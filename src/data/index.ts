@@ -189,34 +189,41 @@ const babes: Array<Babe> = [
   },
 ];
 
-const lang: Array<{ level: number; count: number }> = [
+const lang: Array<{ level: number; count: number; countColor: string }> = [
   {
     level: 0,
     count: 10,
+    countColor: "hsl(0, 80%, 70%)",
   },
   {
     level: 1,
     count: 11,
+    countColor: "hsl(60, 80%, 70%)",
   },
   {
     level: 2,
     count: 12,
+    countColor: "hsl(120, 80%, 70%)",
   },
   {
     level: 3,
     count: 13,
+    countColor: "hsl(180, 80%, 70%)",
   },
   {
     level: 4,
     count: 14,
+    countColor: "hsl(240, 80%, 70%)",
   },
   {
     level: 5,
     count: 15,
+    countColor: "hsl(300, 80%, 70%)",
   },
   {
     level: 6,
     count: 16,
+    countColor: "hsl(360, 80%, 70%)",
   },
 ];
 

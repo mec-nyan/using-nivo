@@ -1,11 +1,11 @@
 import { ResponsiveBar } from "@nivo/bar";
 
 type Lang = {
-  level: number;
+  level: string;
   count: number;
 };
 
-const CustomBar = ({
+const LangBar = ({
   data,
   keys,
   index,
@@ -46,7 +46,7 @@ const CustomBar = ({
     // height: number >> Not required when using <ResponsiveBar />
     // pixelRatio: number >> Optional
     // margin: object >> Optional
-    margin={{ top: 50, right: 100, left: 50, bottom: 50 }}
+    margin={{ top: 50, right: 50, left: 50, bottom: 50 }}
     //
     // STYLES
     //
@@ -124,15 +124,12 @@ const CustomBar = ({
       tickSize: 5,
       tickPadding: 0,
       tickRotation: 0,
-      legend: "Movies",
-      legendPosition: "middle",
-      legendOffset: -40,
     }}
     axisBottom={{
       tickSize: 5,
       tickPadding: 0,
       tickRotation: 0,
-      legend: "Starlets",
+      legend: "English Level",
       legendPosition: "middle",
       legendOffset: 40,
     }}
@@ -140,19 +137,7 @@ const CustomBar = ({
     isInteractive={true}
     // tooltip: function >> Optional.
     // onClick: function >> Optional.
-    legends={[
-      {
-        itemWidth: 100,
-        itemHeight: 20,
-        dataFrom: "keys",
-        anchor: "bottom-right",
-        direction: "column",
-        translateX: 120,
-        translateY: 0,
-        symbolShape: "circle",
-      },
-    ]}
   />
 );
 
-export default CustomBar;
+export default LangBar;
