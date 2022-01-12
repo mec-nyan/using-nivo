@@ -189,4 +189,35 @@ const babes: Array<Babe> = [
   },
 ];
 
-export { data, datum, babes };
+const lang: Array<{ level: number; count: number }> = [
+  {
+    level: 0,
+    count: 10,
+  },
+  {
+    level: 1,
+    count: 11,
+  },
+  {
+    level: 2,
+    count: 12,
+  },
+  {
+    level: 3,
+    count: 13,
+  },
+  {
+    level: 4,
+    count: 14,
+  },
+  {
+    level: 5,
+    count: 15,
+  },
+  {
+    level: 6,
+    count: 16,
+  },
+];
+
+export { data, datum, babes, lang };
